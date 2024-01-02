@@ -51,11 +51,11 @@ function addDataToHTML(data, cityName) {
 }
 
 async function main(cityName) {
-
+    document.querySelector('.city-title').innerHTML = 'Loading...';
+    clearTable();
     let data = await fetchData(cityName);
     if(data.slice(2,7) == 'error'){
         // alert('Sorry, the city entered is not in our database');
-        clearTable();
         document.querySelector('.city-title').innerHTML = 'Sorry, the city entered is not in our database';
         return;
     }
