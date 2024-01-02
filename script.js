@@ -11,9 +11,9 @@ async function fetchData(cityName) {
         const response = await fetch(url, options);
         const result = await response.text();
         console.log('result ='+ result);
-        if(result.slice(2,7) == 'error'){
-            alert('Sorry, the city entered is not in our database');
-        }
+        // if(result.slice(2,7) == 'error'){
+        //     alert('Sorry, the city entered is not in our database');
+        // }
         return result
     } catch (error) {
         console.error(error);
@@ -53,6 +53,12 @@ function addDataToHTML(data, cityName) {
 async function main(cityName) {
 
     let data = await fetchData(cityName);
+    if(data.slice(2,7) == 'error'){
+        // alert('Sorry, the city entered is not in our database');
+        clearTable();
+        document.querySelector('.city-title').innerHTML = 'Sorry, the city entered is not in our database';
+        return;
+    }
     data = JSON.parse(data);
     console.log('data received!!');
 
