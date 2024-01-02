@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    border-bottom: 1.5px solid white;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav img{
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px; */
+    padding-top: 5px;
+    /* background-image: url(Images/clouds-shades-img.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat; */
+}
+
+#cityInput {
+    height: 10vh;
+    width: 60vw;
+    margin: 20px;
+    font-size: 4vh;
+    padding-left: 10px;
+    border: 2px solid grey;
+    border-radius: 8px;
+}
+
+#searchBtn {
+    height: 10vh;
+    width: 20vw;
+    color: white;
+    font-size: 4vh;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-image: url(Images/clouds-shades-img.avif);
+    background-size: 30vw 10vh;
+    background-repeat: repeat;
+}
+
+#cityInput::placeholder {
+    font-size: 4vh;
+}
+
+#searchBtn:hover {
+    background-color: darkgray;
+    cursor: pointer;
+    box-shadow: 3px 3px gray;
+}
+main{
+    background-color: rgb(130, 200, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.result-box{
+    background-color:rgb(189, 223, 237);
+    width: 60vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.city-title{
+    font-size: 5vh;
+    padding: 5px;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    font-size: 30px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+@media only screen and (max-width:767px) {
+
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        padding-top: 5px;
+    }
+
+    #cityInput {
+        font-size: 2vh;
+    }
+
+    #searchBtn {
+        font-size: 2vh;
+    }
+
+    #cityInput::placeholder {
+        font-size: 2vh;
+    }
+    table{
+        font-size: 15px;
+    }
+}

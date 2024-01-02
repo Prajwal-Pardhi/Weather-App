@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div><img src="Images/logo-weather-app.png" alt="logo"></div>
+            <div><h1 class="logo">Weather App</h1></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Forecast</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="search-box">
+            <div><input type="text" id="cityInput" placeholder="Enter City Name" onkeydown="keyPressed(event)"></div>
+            <div><button id="searchBtn" onclick="getWeather()">Get Weather</button></div>
+        </div>
+
+        <div class="result-box">
+            <div class="city-title"></div>
+            <table id="data-table">
+                <thead>
+                    <!-- <tr>
+                        <th>Text</th>
+                        <th>Value</th>
+                    </tr> -->
+                </thead>
+                <tbody>
+                    <!-- Rows will be added dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
